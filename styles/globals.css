@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f9fa;
+  color: #343a40;
+}
+
+h1, h2 {
+  margin-bottom: 1rem;
+}
+
+.loader {
+  border-top-color: #3498db;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.pokemon-theme {
+  background: url('https://wallpapercrafter.com/desktop/101133-Pokmon-nature-Pikachu-Charmander-Bulbasaur-Squirtle-plants-grass-moss-water-fire-trees-concept-art.jpg') no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+/* Ensure html and body take full height */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header specific styles */
+header {
+  width: 100%;
+  height: 20rem; /* Increase the height for a larger image */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center the image */
+}
+
+/* Image styles to ensure it fits well */
+header img {
+  max-height: 100%; /* Ensure the image fits within the header */
+  width: auto; /* Maintain aspect ratio */
+  object-fit: contain; /* Maintain aspect ratio */
+}
+
+/* Adjust container styles */
+.container {
+  padding-top: 1rem; /* Add some top padding for spacing */
+}
+
+.scroll-button {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  z-index: 1000; /* Ensure it appears above other elements */
+}
+
+.scroll-button:hover {
+  background-color: #0056b3;
+}
+
+/* Additional styling for FontAwesome icon */
+.scroll-button svg {
+  width: 20px; /* Adjust size if needed */
+  height: 20px; /* Adjust size if needed */
+}
